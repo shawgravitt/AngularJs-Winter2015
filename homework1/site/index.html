@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html ng-app="project1">
+<head>
+  <title>project1</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="content-type" content="text/html;charset=UTF-8">
+  <meta http-equiv="x-ua-compatible" content="IE=edge">
+  <meta name="apple-mobile-web-app-capable" context="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" context="black">
+  <link href="app/app.less" type="text/css" rel="stylesheet/less">
+  <link href="vendor/animate.css/animate.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+  <!-- Load Modernizr first as it appends to HTML and other functionality depends on it -->
+  <script src="vendor/modernizr/modernizr.js"></script>
+
+  <div>
+    <div id="content" class="container">
+        <div data-ng-include src ="'app/framework/components/top-navigation/view/navigation-view.html'"></div>
+
+      <div class="row">
+        <div ui-view>
+        </div>
+      </div>
+    </div>
+  </div>
+
+
+  <!-- JS from Bower Components -->
+  <script src="vendor/jquery/jquery.js"></script>
+  <script src="vendor/jquery.animate-enhanced/jquery.animate-enhanced.min.js"></script>
+  <script src="vendor/jquery.easing/js/jquery.easing.js"></script>
+  <script src="vendor/bootstrap/dist/js/bootstrap.js"></script>
+
+  <script src="vendor/less.js/dist/less-1.6.2.js" data-concat="false"></script>
+  <script src="vendor/underscore/underscore.js"></script>
+  <script src="vendor/moment/moment.js"></script>
+  <script src="vendor/angular/angular.js"></script>
+  <script src="vendor/angular-ui-router/release/angular-ui-router.js"></script>
+  <script src="vendor/angular-animate/angular-animate.js"></script>
+  <script src="vendor/angular-resource/angular-resource.js"></script>
+  <script src="vendor/angular-bootstrap/ui-bootstrap-tpls.js"></script>
+  <script src="vendor/angular-ui-utils/ui-utils.js"></script>
+  <script src="vendor/angular-cookies/angular-cookies.js"></script>
+  <script src="vendor/angular-load/angular-load.js"></script>
+  <script src="vendor/d3/d3.js"></script>
+  <script src="vendor/log4javascript/log4javascript.js"></script>
+  <!-- new in 1.0.10 -->
+  <script src="vendor/lodash/dist/lodash.js"></script>
+  <!-- Add New Bower Component JS Above -->
+
+
+
+  <!-- Livereload script for development only (stripped during dist build) -->
+  <script src="http://localhost:35729/livereload.js" data-concat="false"></script>
+
+
+  <!-- Main App JS -->
+  <script src="app/app.js"></script>
+  <script src="app/home/home.js"></script>
+  <script src="app/about/about.js"></script>
+  <script src="app/contact/contact.js"></script>
+  <script src="app/framework/components/top-navigation/top-navigation.js"></script>
+  <script src="app/framework/components/top-navigation/service/navigation-service.js"></script>
+  <script src="app/framework/components/top-navigation/controller/navigation-controller.js"></script>
+  <!-- Add New Component JS Above -->
+
+
+</body>
+</html>

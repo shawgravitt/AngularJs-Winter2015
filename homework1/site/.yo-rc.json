@@ -1,0 +1,43 @@
+{
+  "generator-cg-angular": {
+    "uirouter": true,
+    "partialDirectory": "partial/",
+    "modalDirectory": "partial/",
+    "controllerDirectory": "controller/",
+    "directiveDirectory": "directive/",
+    "filterDirectory": "filter/",
+    "factoryDirectory": "factory/",
+    "serviceDirectory": "service/",
+    "inject": {
+      "js": {
+        "file": "index.html",
+        "marker": "<!-- Add New Component JS Above -->",
+        "template": "<script src=\"<%= filename %>\"></script>"
+      },
+      "less": {
+        "relativeToModule": true,
+        "file": "<%= module %>.less",
+        "marker": "/* Add Component LESS Above */",
+        "template": "@import \"<%= filename %>\";"
+      }
+    },
+    "modules": [
+      {
+        "name": "home",
+        "file": "app/home/home.js"
+      },
+      {
+        "name": "about",
+        "file": "app/about/about.js"
+      },
+      {
+        "name": "contact",
+        "file": "app/contact/contact.js"
+      },
+      {
+        "name": "topNavigation",
+        "file": "app/framework/components/top-navigation/top-navigation.js"
+      }
+    ]
+  }
+}
