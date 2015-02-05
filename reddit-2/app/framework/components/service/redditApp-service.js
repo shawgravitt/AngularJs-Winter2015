@@ -6,9 +6,9 @@ angular.module('redditAppModule').service('redditAppService', ['$http', '$q', fu
    * resolve returns response, reject returns error
    * @returns {promise.promise|jQuery.promise}
    */
-  this.nextPage = function() {
+  this.nextPage = function(after) {
     var deferred = $q.defer(),
-    url = 'http://api.reddit.com/hot?after=' + this.after + '&jsonp=JSON_CALLBACK';
+    url = 'http://api.reddit.com/hot?after=' + after + '&jsonp=JSON_CALLBACK';
 
     $http.jsonp(url)
       .success(function (results) {
