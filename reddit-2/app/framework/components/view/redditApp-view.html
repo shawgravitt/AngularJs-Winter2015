@@ -10,7 +10,9 @@
         {{ item.score }}
       </li>
       <li class="thumbnail">
-        <img src="{{ item.thumbnail }}" alt=""/>
+        <a ng-href="{{ item.url }}">
+          <img src="{{ item.thumbnail }}" alt=""/>
+        </a>
       </li>
       <li class="title">
         <a ng-href="{{ item.url }}" target="_blank">

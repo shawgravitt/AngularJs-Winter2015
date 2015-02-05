@@ -3,7 +3,7 @@ angular.module('redditAppModule').factory('RedditAppFactory',['redditAppService'
   var Reddit = function() {
     this.items = [];
     this.busy = false;
-    this.after = '';
+    var after = this.after = '';
 
     this.nextPage = function() {
       var self = this;
