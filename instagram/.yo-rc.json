@@ -1,0 +1,31 @@
+{
+  "generator-cg-angular": {
+    "uirouter": true,
+    "partialDirectory": "partial/",
+    "modalDirectory": "partial/",
+    "controllerDirectory": "controller/",
+    "directiveDirectory": "directive/",
+    "filterDirectory": "filter/",
+    "factoryDirectory": "factory/",
+    "serviceDirectory": "service/",
+    "inject": {
+      "js": {
+        "file": "index.html",
+        "marker": "<!-- Add New Component JS Above -->",
+        "template": "<script src=\"<%= filename %>\"></script>"
+      },
+      "less": {
+        "relativeToModule": true,
+        "file": "<%= module %>.less",
+        "marker": "/* Add Component LESS Above */",
+        "template": "@import \"<%= filename %>\";"
+      }
+    },
+    "modules": [
+      {
+        "name": "instagramModule",
+        "file": "app/framework/components/instagram-module/instagram-module.js"
+      }
+    ]
+  }
+}

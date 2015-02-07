@@ -1,0 +1,34 @@
+<div class="instagram-view">
+	<ul data-ng-repeat="item in instagramCtrl.igData"
+      data-ng-class-even="'even'"
+      data-ng-class-odd="'odd'">
+
+    <li>
+      <img data-ng-src="{{ item.images.low_resolution.url }}" alt="">
+    </li>
+
+
+    <div class="image-content">
+
+      <li>
+        <h2>{{ item.user.username }}</h2>
+      </li>
+
+
+      <li>
+        <h3>
+          {{ item.caption.text }}
+        </h3>
+      </li>
+
+
+      <li>
+        <em>
+          <span data-ng-repeat="tag in item.tags">#{{ tag }}</span>
+        </em>
+      </li>
+
+    </div>
+
+	</ul>
+</div>
