@@ -1,4 +1,6 @@
-angular.module('youtubeModule').service('youtubeService', ['$http', '$q', function($http, $q) {
+angular.module('disneyModule').service('disneyService', ['$http', '$q', function($http, $q) {
+
+  //var attractionsUrl = 'http://touringplans.com/magic-kingdom/attractions.json';
 
   /**
    * function getData
@@ -6,9 +8,10 @@ angular.module('youtubeModule').service('youtubeService', ['$http', '$q', functi
    * resolve returns response, reject returns error
    * @returns {promise.promise|jQuery.promise}
    */
-  this.getYoutube = function() {
+  this.getDisneyAttractions = function() {
     var deferred = $q.defer();
-    var url = 'http://gdata.youtube.com/feeds/api/standardfeeds/most_popular?v=2&alt=json';
+    //var url = 'http://touringplans.com/magic-kingdom/attractions/haunted-mansion.json';
+    var url = 'http://touringplans.com/magic-kingdom/attractions.json';
 
     $http.get(url)
       .success(function (results) {

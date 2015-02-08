@@ -1,6 +1,13 @@
-angular.module('youtubeModule').controller('youtubeController', ['$scope', 'youtubeFactory', function($scope, youtubeFactory) {
+angular.module('youtubeModule').controller('youtubeController', ['$scope', 'youtubeService', function($scope, youtubeService) {
   var ctrl = this;
 
-  ctrl.youtube = new youtubeFactory();
-
+  ctrl.getYoutube = function() {
+    youtubeService.getYoutube()
+      .then(function(results) {
+        ctrl.youtubeData = results.data;
+      }, function(error) {
+        alert('controller');
+      });
+  };
+  ctrl.getYoutube();
 }]);
