@@ -1,0 +1,55 @@
+<div class="instagram-tag-view animated zoomIn">
+  <ul data-ng-repeat="item in instagramCtrl.igData"
+      data-ng-class-even="'even'"
+      data-ng-class-odd="'odd'"
+      class="animated image-grid"
+
+
+    >
+
+    <li class="animated"
+        data-ng-class="{flash : hover}"
+        data-ng-mouseenter="hover = true"
+        data-ng-mouseleave="hover = false">
+      <img  data-ng-click="modalOpenController($event)" data-ng-src="{{ item.images.low_resolution.url }}" alt="">
+    </li>
+
+
+    <div class="modal-container" >
+
+
+
+      <div data-ng-click="modalCloseController($event)" class="modal-background"></div>
+
+      <div class="modal-content">
+        <li>
+          <img data-ng-src="{{ item.images.standard_resolution.url }}" alt="">
+        </li>
+
+
+
+
+        <!--<li class="user">-->
+          <!--<h2>{{ item.user.username }}</h2>-->
+          <!--<img data-ng-src="{{ item.user.profile_picture }}" alt=""/>-->
+          <!--<p>-->
+            <!--{{ item.likes.count }} Likes-->
+          <!--</p>-->
+        <!--</li>-->
+          <!--<li>-->
+            <!--<h3>-->
+              <!--{{ item.caption.text }}-->
+            <!--</h3>-->
+          <!--</li>-->
+          <!--<li class="tag">-->
+            <!--<em>-->
+              <!--<span data-ng-repeat="tag in item.tags">#{{ tag }}</span>-->
+            <!--</em>-->
+          <!--</li>-->
+
+
+        </div>
+    </div>
+
+  </ul>
+</div>
