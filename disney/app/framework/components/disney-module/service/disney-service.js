@@ -10,12 +10,12 @@ angular.module('disneyModule').service('disneyService', ['$http', '$q', function
    */
   this.getDisneyAttractions = function() {
     var deferred = $q.defer();
-    //var url = 'http://touringplans.com/magic-kingdom/attractions/haunted-mansion.json';
-    var url = 'http://touringplans.com/magic-kingdom/attractions.json';
+    //var url = 'http://touringplans.com/magic-kingdom/attractions/haunted-mansion.json?callback=JSON_CALLBACK';
+    var url = 'http://touringplans.com/magic-kingdom/attractions.json?callback=JSON_CALLBACK';
 
-    $http.get(url)
+    $http.jsonp(url)
       .success(function (results) {
-        var data = results || [];
+        var data = results;
         deferred.resolve(data);
       })
       .error(function (error) {

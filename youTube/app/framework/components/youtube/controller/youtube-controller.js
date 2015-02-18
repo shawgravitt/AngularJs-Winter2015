@@ -4,7 +4,7 @@ angular.module('youtubeModule').controller('youtubeController', ['$scope', 'yout
   ctrl.getYoutube = function() {
     youtubeService.getYoutube()
       .then(function(results) {
-        ctrl.youtubeData = results.data;
+        ctrl.youtubeData = results.feed.entry;
       }, function(error) {
         alert('controller');
       });

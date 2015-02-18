@@ -8,11 +8,28 @@ angular.module('instagramModule').service('instagramService', ['$http', '$q', 'c
    * resolve returns response, reject returns error
    * @returns {promise.promise|jQuery.promise}
    */
-  this.getPopularImages = function() {
-    var deferred = $q.defer();
-    //var url = instagramUri + 'media/popular?client_id=' + clientId + '&callback=JSON_CALLBACK';
-    var url = instagramUri + 'tags/rei1440project/media/recent?client_id=' + clientId + '&callback=JSON_CALLBACK';
+  //this.getPopularImages = function() {
+  //  var deferred = $q.defer();
+  //  //var url = instagramUri + 'media/popular?client_id=' + clientId + '&callback=JSON_CALLBACK';
+  //  var url = instagramUri + 'tags/rei1440project/media/recent?client_id=' + clientId + '&callback=JSON_CALLBACK';
+  //
+  //
+  //  $http.jsonp(url)
+  //    .success(function (results) {
+  //      var data = results || [];
+  //      deferred.resolve(data);
+  //    })
+  //    .error(function (error) {
+  //      deferred.reject (error);
+  //    });
+  //
+  //  return deferred.promise;
+  //};
 
+
+  this.getTaggedImages = function() {
+    var deferred = $q.defer();
+    var url = instagramUri + 'tags/rei1440project/media/recent?client_id=' + clientId + '&callback=JSON_CALLBACK';
 
     $http.jsonp(url)
       .success(function (results) {

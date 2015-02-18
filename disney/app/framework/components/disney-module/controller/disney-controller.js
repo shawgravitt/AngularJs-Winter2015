@@ -4,9 +4,9 @@ angular.module('disneyModule').controller('disneyController', ['$scope', 'disney
   ctrl.getDisneyAttractions = function() {
     disneyService.getDisneyAttractions()
       .then(function(resutls) {
-        ctrl.attractionData = resutls.data;
+        ctrl.attractionData = resutls;
       }, function(error) {
-        alert('controller error getting attraction data');
+        console.log('controller error getting attraction data');
       });
   };
   ctrl.getDisneyAttractions();

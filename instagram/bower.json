@@ -32,6 +32,7 @@
     "requirejs": "~2.1.15",
     "oclazyload": "~0.3.8",
     "ui-router-extras": "~0.0.10",
-    "underscore": "~1.5"
+    "underscore": "~1.5",
+    "angular-modal-service": "~0.6.0"
   }
 }

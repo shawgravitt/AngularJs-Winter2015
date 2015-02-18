@@ -1,0 +1,25 @@
+<div class="instagram-slide-view">
+  <ul data-ng-repeat="item in instagramCtrl.igData"
+      data-ng-if="instagramCtrl.activeImageIndex === $index"
+      data-ng-class-even="'even'"
+      data-ng-class-odd="'odd'"
+      class="animated">
+
+    <li class="username animated"
+        data-ng-class="{lightSpeedOut : hover}"
+        data-ng-mouseenter="hover = true"
+        data-ng-mouseleave="hover = false">
+      <h3>{{ item.user.username }}</h3>
+    </li>
+
+    <li class="img">
+      <span class="bg_img" data-ng-style="{'background-image': 'url( {{ item.images.standard_resolution.url }} )'}"></span>
+    </li>
+
+    <li class="caption animated zoomIn">
+      <h4>{{ item.caption.text }}</h4>
+    </li>
+  </ul>
+
+</div>
+

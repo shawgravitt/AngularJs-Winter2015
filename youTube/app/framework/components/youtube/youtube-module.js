@@ -5,7 +5,8 @@ angular.module('youtubeModule').config(function($stateProvider) {
     url: '/youTube',
     templateUrl: 'app/framework/components/youtube/view/youtube-view.html',
     controller: 'youtubeController',
-    controllerAs: 'youtubeCtrl'
+    controllerAs: 'youtubeCtrl',
+
   });
     /* Add New States Above */
 

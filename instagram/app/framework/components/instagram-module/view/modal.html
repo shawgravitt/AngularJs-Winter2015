@@ -1,0 +1,31 @@
+<div class="modal" >
+  <li>
+    <img data-ng-src="{{ item.images.standard_resolution.url }}" alt="">
+  </li>
+  <li class="user">
+    <h2>{{ item.user.username }}</h2>
+    <img data-ng-src="{{ item.user.profile_picture }}" alt=""/>
+    <p>
+      {{ item.likes.count }} Likes
+    </p>
+  </li>
+
+
+  <div class="image-content">
+
+    <li>
+      <h3>
+        {{ item.caption.text }}
+      </h3>
+    </li>
+
+
+    <li class="tag">
+      <em>
+        <span data-ng-repeat="tag in item.tags">#{{ tag }}</span>
+      </em>
+    </li>
+
+
+  </div>
+</div>

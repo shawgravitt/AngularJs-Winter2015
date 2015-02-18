@@ -1,8 +1,22 @@
 <div class="youtube-view">
-  <h1>loaded</h1>
-  <ul data-ng-repeat="item in youtubeCtrl.data">
-    <l1>
-      {{ item.feed.xmlns }}
-    </l1>
+  <ul data-ng-repeat="item in youtubeCtrl.youtubeData"
+      data-ng-class-even="'even'"
+      data-ng-class-odd="'odd'"
+    >
+    <li>
+      {{ item.title.$t }}
+    </li>
+    <li class="ng-animate ng-enter ng-enter-active">
+      <a href="{{ item.link[0].href}}">
+        <img data-ng-src="{{ item.media$group.media$thumbnail[0].url}}" alt=""/>
+      </a>
+    </li>
+    <!--<li>-->
+      <!--{{item.media$group.yt$videoid.$t}}-->
+
+    <!--</li>-->
+    <!--<li>-->
+      <!--<iframe width="853" height="480" data-ng-src="https://www.youtube.com/embed/{{item.media$group.yt$videoid.$t}}" frameborder="0" allowfullscreen></iframe>-->
+    <!--</li>-->
   </ul>
 </div>

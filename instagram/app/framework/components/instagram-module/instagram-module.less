@@ -1,39 +1,159 @@
 /* Component LESS */
 /* Add Component LESS Above */
 
-.instagram-view, .instagram-tag-view {
+.instagram-tag-view {
   font-family: "Century Gothic",CenturyGothic,AppleGothic,sans-serif;
   ul {
     list-style-type: none;
-    width: 100%;
+    width: 25%;
     padding: 0;
-    overflow: scroll;
+//    overflow: scroll;
     margin: 0;
+    display: inline-block;
+    text-align: center;
     li {
       overflow-wrap: break-word;
-      display: inline-block;
-      &:first-child {
-        display: inline-block;
-      }
     }
   }
   .even {
-    background-color: #eaeaea;
+
   }
   .user {
     vertical-align: top;
     margin-left: 25px;
     margin-top: -25px;
   }
-}
-.tag {
-  width: 100%;
+
+
+  .modal-container {
+    display: none;
+    position: fixed;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    z-index: 9999;
+  }
+
+  .modal-background {
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    background-color: rgba(0, 0, 0, 0.1);
+    top: 0;
+  }
+
+  .modal-content {
+    position: absolute;
+    left: 50%;
+    margin-top: 5px;
+    -webkit-transform: translateX(-50%);
+    -moz-transform: translateX(-50%);
+    -ms-transform: translateX(-50%);
+    -o-transform: translateX(-50%);
+    transform: translateX(-50%);
+  }
+
+//.tag {
+//  width: 100%;
+//}
+//
+//.image-content {
+//  display: inline-block;
+//  vertical-align: top;
+//  width: 50%;
+//  margin-left: 25px;
+//}
+
 }
 
-.image-content {
-  display: inline-block;
-  vertical-align: top;
-  width: 50%;
-  margin-left: 25px;
+.instagram-slide-view {
+  background: #000;
+  position: relative;
+  overflow: hidden;
+  height: 100vh;
+  width: 100%;
+  ul {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100vh;
+    width: 100vw;
+  }
+  li {
+    color: #ffffff;
+    background-color: rgba(0,0,0,0.5);
+  }
+  .username {
+    position: absolute;
+    top: 20px;
+    left: 20px;
+    right: 20px;
+    padding: 20px;
+  }
+  .img {
+    height: 100vh;
+    width: 100%;
+    .bg_img {
+      -webkit-animation-name: MOVE-BG;
+      -webkit-animation-duration: 10s;
+      -webkit-animation-timing-function: linear;
+      -webkit-animation-iteration-count: 1;
+      display: block;
+      background-repeat: no-repeat;
+      background-position: 50% 0%;
+      background-size: cover;
+      height: 90%;
+      width: 90%;
+      margin: 5% auto 5% auto;
+    }
+  }
+  .caption {
+    position: absolute;
+    bottom: 0;
+    left: 20px;
+    right: 20px;
+    padding: 20px;
+  }
+
+  .even.animated.ng-enter {
+    -webkit-animation: bounceInRight 1.25s;
+    -moz-animation: bounceInRight 1.25s;
+    -o-animation: bounceInRight 1.25s;
+    animation: bounceInRight 1.25s;
+  }
+  .even.animated.ng-leave {
+    -webkit-animation: bounceOutRight 1.25s;
+    -moz-animation: bounceOutRight 1.25s;
+    -o-animation: bounceOutRight 1.25s;
+    animation: bounceOutRight 1.25s;
+  }
+  .odd.animated.ng-enter {
+    -webkit-animation: bounceInLeft 1.25s;
+    -moz-animation: bounceInLeft 1.25s;
+    -o-animation: bounceInLeft 1.25s;
+    animation: bounceInLeft 1.25s;
+  }
+  .odd.animated.ng-leave {
+    -webkit-animation: bounceOutLeft 1.25s;
+    -moz-animation: bounceOutLeft 1.25s;
+    -o-animation: bounceOutLeft 1.25s;
+    animation: bounceOutLeft 1.25s;
+  }
+
 }
+
+@-webkit-keyframes MOVE-BG {
+  0% {
+    background-position: 50% 0%;
+  }
+  100% {
+    background-position: 50% 80%;
+  }
+}
+
+
 
