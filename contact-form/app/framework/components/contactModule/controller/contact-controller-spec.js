@@ -1,12 +1,12 @@
-describe('instagramTagController', function() {
+describe('contactController', function() {
 
-  beforeEach(module('instagramModule'));
+  beforeEach(module('contactModule'));
 
   var scope, ctrl;
 
   beforeEach(inject(function($rootScope, $controller) {
     scope = $rootScope.$new();
-    ctrl = $controller('instagramTagController', {$scope: scope});
+    ctrl = $controller('contactController', {$scope: scope});
   }));
 
   it('should ...', inject(function() {
