@@ -1,0 +1,14 @@
+<div class="strains-view">
+  <ul data-ng-repeat="item in strainsCtrl.strainData">
+    <li ng-click="strainsCtrl.getStrainsByName(item.UrlName)">
+      {{ item.Name }}
+    </li>
+    <li>
+      {{ item.Category }}
+    </li>
+  </ul>
+</div>
+
+<div ng-if="strainsCtrl.selectedStrain">
+  booah
+</div>

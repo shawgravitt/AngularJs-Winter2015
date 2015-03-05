@@ -1,0 +1,15 @@
+<div class="navigation-view" data-ng-controller="navController as navCtrl">
+  <h1>WEED</h1>
+
+  <ul class="nav-list">
+    <li data-ng-repeat="item in navCtrl.items">
+
+      <a ui-sref="{{item.id}}"
+         ui-sref-active="active">
+        <!--<i data-ng-class="item.iconClass"></i>-->
+        {{ item.name }}
+      </a>
+
+    </li>
+  </ul>
+</div>

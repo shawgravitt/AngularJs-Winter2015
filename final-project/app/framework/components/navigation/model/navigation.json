@@ -1,0 +1,32 @@
+{
+  "list": [
+    {
+      "id": "home",
+      "name": "Home",
+      "url": "#/home",
+      "visible": true,
+      "iconClass": "fa fa-list"
+    },
+    {
+      "id": "top-rated",
+      "name": "Top Rated",
+      "url": "#/top-rated",
+      "visible": true,
+      "iconClass": "fa fa-cube"
+    },
+    {
+      "id": "search",
+      "name": "Search",
+      "url": "#/search",
+      "visible": true,
+      "iconClass": "fa fa-cube"
+    },
+    {
+      "id": "contact",
+      "name": "Contact",
+      "url": "#/contact",
+      "visible": true,
+      "iconClass": "fa fa-alt"
+    }
+  ]
+}
