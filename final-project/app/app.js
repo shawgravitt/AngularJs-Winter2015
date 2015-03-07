@@ -1,4 +1,4 @@
-angular.module('leafly', ['ui.bootstrap', 'ui.utils', 'ui.router', 'ngAnimate', 'home', 'contact', 'topRated', 'search', 'navigationModule', 'strainsModule']);
+angular.module('leafly', ['ui.bootstrap', 'ui.utils', 'ui.router', 'ngAnimate', 'home', 'contact', 'navigationModule', 'strainsModule']);
 
 angular.module('leafly').config(function ($stateProvider, $urlRouterProvider, $httpProvider) {
 

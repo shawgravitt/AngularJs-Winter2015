@@ -1,4 +1,4 @@
-angular.module('strainsModule', ['ui.bootstrap','ui.utils','ui.router','ngAnimate']);
+angular.module('strainsModule', ['ui.bootstrap','ui.utils','ui.router','ngAnimate', 'infinite-scroll']);
 
 angular.module('strainsModule').config(function($stateProvider) {
   $stateProvider.state('strains', {

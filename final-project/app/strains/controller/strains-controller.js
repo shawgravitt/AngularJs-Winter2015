@@ -1,6 +1,7 @@
-angular.module('strainsModule').controller('strainsController', ['$scope', '$modal', 'strainsService', function($scope, $modal, strainsService) {
+angular.module('strainsModule').controller('strainsController', ['$scope', '$modal', 'strainsService', 'strainsFactory', function($scope, $modal, strainsService, strainsFactory) {
 
   var ctrl = this;
+  ctrl.strains = new strainsFactory();
 
   ctrl.popularStrains = function() {
     strainsService.popularStrains().then(function(results) {
@@ -12,10 +13,6 @@ angular.module('strainsModule').controller('strainsController', ['$scope', '$mod
 
   ctrl.popularStrains();
 
-
-  /// TODO: get strain by name
-  // then, populate:
-  // ctrl.selectedStrain = '';
 
   ctrl.getStrainsByName = function(name) {
     console.log(name);
@@ -35,7 +32,7 @@ angular.module('strainsModule').controller('strainsController', ['$scope', '$mod
       resolve: {
         strainName: function() {
           console.log(name);
-          return ctrl.nameData;//strain name images modal controller strain name instead of uri
+          return ctrl.nameData;
         }
       }
     });

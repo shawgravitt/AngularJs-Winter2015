@@ -1,4 +1,78 @@
 <div class="strains-modal">
-  {{ strainName }}
+  <ul>
+    <div class="modal-header">
+      <li>
+        <h2>{{ strainName.name }}</h2>
+      </li>
+      <li>
+        {{ strainName.category}}
+      </li>
+    </div>
+
+    <li>
+      {{ strainName.descriptionPlain }}
+    </li>
+    <li>
+      <b>Rating:</b>
+      {{ strainName.rating }}
+    </li>
+    <li class="list-info">
+      <b>Related Strains:</b>
+      <ul>
+        <li data-ng-repeat="item in strainName.relatedStrains">
+          {{ item.name }} - {{ item.category }},&nbsp;
+        </li>
+      </ul>
+    </li>
+    <li class="list-info">
+      <b>Flavors:</b>
+      <ul>
+        <li data-ng-repeat="item in strainName.flavors">
+          {{ item.name }},&nbsp;
+        </li>
+      </ul>
+    </li>
+    <li class="list-info">
+      <b>Effects:</b>
+      <ul>
+        <li data-ng-repeat="item in strainName.effects">
+          {{ item.name }},&nbsp;
+        </li>
+      </ul>
+    </li>
+    <li class="list-info">
+      <b>Symptoms:</b>
+      <ul>
+        <li data-ng-repeat="item in strainName.symptoms">
+          {{ item.name }},&nbsp;
+        </li>
+      </ul>
+    </li>
+    <li class="list-info">
+      <b>Conditions:</b>
+      <ul>
+        <li data-ng-repeat="item in strainName.conditions">
+          {{ item.name }},&nbsp;
+        </li>
+      </ul>
+    </li>
+    <li class="list-info">
+      <b>Negatives:</b>
+      <ul>
+        <li data-ng-repeat="item in strainName.negatives">
+          {{ item.name }},&nbsp;
+        </li>
+      </ul>
+    </li>
+    <li class="list-info">
+      <ul>
+        <li data-ng-repeat="item in strainName.photos">
+          <img data-ng-src="{{ item.thumb }}" alt=""/> &nbsp;
+        </li>
+      </ul>
+    </li>
+
+  </ul>
+
 
 </div>

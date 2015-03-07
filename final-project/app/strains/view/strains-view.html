@@ -1,14 +1,33 @@
 <div class="strains-view">
-  <ul data-ng-repeat="item in strainsCtrl.strainData">
-    <li ng-click="strainsCtrl.getStrainsByName(item.UrlName)">
-      {{ item.Name }}
-    </li>
-    <li>
-      {{ item.Category }}
-    </li>
-  </ul>
+
+  <div infinite-scroll="strainsCtrl.strains.popularStrains()"
+       infinite-scroll-disabled="strains.busy"
+       infinite-scroll-distance="1">
+    <h2>Most Popular Strains</h2>
+
+      <ul data-ng-repeat="item in strainsCtrl.strainData"
+          data-ng-click="strainsCtrl.getStrainsByName(item.UrlName)"
+          data-ng-class-even="'even'"
+          data-ng-class-odd="'odd'"
+          class="animated flipInX">
+        <div data-ng-class="{flip : hover}"
+             data-ng-mouseenter="hover = true"
+             data-ng-mouseleave="hover = false"
+            class="animated">
+
+          <li>
+            {{ item.Name }}
+          </li>
+          <li>
+            {{ item.Category }}
+          </li>
+          <li>
+            {{ item.Rating }}
+          </li>
+        </div>
+      </ul>
+
+    <!--<div daata-ng-show="strains.busy">Loading data...</div>-->
+  </div>
 </div>
 
-<div ng-if="strainsCtrl.selectedStrain">
-  booah
-</div>

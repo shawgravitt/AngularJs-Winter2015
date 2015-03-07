@@ -4,7 +4,7 @@ angular.module('strainsModule').service('strainsService', ['$http', '$q', functi
   this.popularStrains = function() {
     var deferred = $q.defer(),
         url = 'http://data.leafly.com/strains',
-        obj = {'Page':0, 'Take':50, "sort":"popular"};
+        obj = {'Page':0, 'Take':50, 'sort':'popular'};
 
     $http.post(url, obj)
       .success(function (results) {
@@ -17,10 +17,6 @@ angular.module('strainsModule').service('strainsService', ['$http', '$q', functi
 
     return deferred.promise;
   };
-
-
-
-  /// TODO: get strain by name
 
   this.getStrainsByName = function(name) {
     var deferred = $q.defer(),

@@ -1,3 +1,49 @@
 /* Component LESS */
 /* Add Component LESS Above */
 
+.contact-view {
+  width: 80%;
+  margin: 25px auto;
+  .ng-invalid.ng-touched {
+    background-color: #FA787E;
+  }
+
+  .ng-valid.ng-touched {
+    background-color: #78FA89;
+  }
+  .message-preview {
+    display: inline-block;
+    width: 45%;
+    vertical-align: top;
+  }
+}
+
+form {
+  display: inline-block;
+  width: 50%;
+  background-color: rgba(227,223,227,0.8);
+  color: #1F242B;
+  padding: 50px;
+  text-transform: uppercase;
+  text-align: center;
+  -webkit-border-radius: 10px;
+  border-radius: 10px;
+  input,
+  textarea {
+    width: 75%;
+    display: block;
+    margin: 5px auto 0;
+    padding: 3px;
+  }
+  input {
+    &[type="submit"] {
+      margin-top: 15px auto 0 auto;
+      background-color: #323C48;
+      color: #E3DFE3;
+      border: none;
+      padding: 15px;
+      text-transform: uppercase;
+    }
+  }
+
+}

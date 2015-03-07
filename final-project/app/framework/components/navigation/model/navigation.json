@@ -8,16 +8,9 @@
       "iconClass": "fa fa-list"
     },
     {
-      "id": "top-rated",
-      "name": "Top Rated",
-      "url": "#/top-rated",
-      "visible": true,
-      "iconClass": "fa fa-cube"
-    },
-    {
-      "id": "search",
-      "name": "Search",
-      "url": "#/search",
+      "id": "strains",
+      "name": "Strain Info",
+      "url": "#/strains",
       "visible": true,
       "iconClass": "fa fa-cube"
     },

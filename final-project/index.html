@@ -15,8 +15,9 @@
   <script src="vendor/modernizr/modernizr.js"></script>
 
   <div>
+    <div data-ng-include src ="'app/framework/components/navigation/view/navigation-view.html'"></div>
     <div id="content" class="container">
-      <div data-ng-include src ="'app/framework/components/navigation/view/navigation-view.html'"></div>
+
       <div class="row">
         <div ui-view>
         </div>
@@ -42,6 +43,7 @@
   <script src="vendor/angular-ui-utils/ui-utils.js"></script>
   <script src="vendor/angular-cookies/angular-cookies.js"></script>
   <script src="vendor/angular-load/angular-load.js"></script>
+  <script src="vendor/ngInfinitescroll/build/ng-infinite-scroll.js"></script>
   <script src="vendor/d3/d3.js"></script>
   <script src="vendor/log4javascript/log4javascript.js"></script>
   <!-- new in 1.0.10 -->
@@ -58,16 +60,15 @@
   <script src="app/app.js"></script>
   <script src="app/home/home.js"></script>
   <script src="app/contact/contact.js"></script>
-  <script src="app/top-rated/top-rated.js"></script>
-  <script src="app/search/search.js"></script>
+  <script src="app/strains/strains-module.js"></script>
   <script src="app/framework/components/navigation/navigation-module.js"></script>
   <script src="app/framework/components/navigation/controller/nav-controller.js"></script>
   <script src="app/contact/controller/contact-controller.js"></script>
   <script src="app/framework/components/navigation/service/navigation-service.js"></script>
-  <script src="app/strains/strains-module.js"></script>
   <script src="app/strains/controller/strains-controller.js"></script>
   <script src="app/strains/service/strains-service.js"></script>
   <script src="app/strains/controller/modal-controller.js"></script>
+  <script src="app/strains/factory/strains-factory.js"></script>
   <!-- Add New Component JS Above -->
 
 
