@@ -13,7 +13,7 @@
         <div data-ng-class="{flip : hover}"
              data-ng-mouseenter="hover = true"
              data-ng-mouseleave="hover = false"
-            class="animated">
+            class="animated card">
 
           <li>
             {{ item.Name }}
@@ -22,7 +22,7 @@
             {{ item.Category }}
           </li>
           <li>
-            {{ item.Rating }}
+            Rating: {{ item.Rating /2 }}
           </li>
         </div>
       </ul>

@@ -1,4 +1,4 @@
-angular.module('strainsModule').factory('strainsFactory',['strainsService', function(strainsService) {
+angular.module('strainsModule').factory('StrainsFactory',['strainsService', function(strainsService) {
 
   var strains = function() {
     this.items = [];

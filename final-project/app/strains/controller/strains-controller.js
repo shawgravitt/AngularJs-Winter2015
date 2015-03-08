@@ -1,7 +1,7 @@
-angular.module('strainsModule').controller('strainsController', ['$scope', '$modal', 'strainsService', 'strainsFactory', function($scope, $modal, strainsService, strainsFactory) {
+angular.module('strainsModule').controller('strainsController', ['$scope', '$modal', 'strainsService', 'StrainsFactory', function($scope, $modal, strainsService, StrainsFactory) {
 
   var ctrl = this;
-  ctrl.strains = new strainsFactory();
+  ctrl.strains = new StrainsFactory();
 
   ctrl.popularStrains = function() {
     strainsService.popularStrains().then(function(results) {

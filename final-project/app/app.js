@@ -3,7 +3,7 @@ angular.module('leafly', ['ui.bootstrap', 'ui.utils', 'ui.router', 'ngAnimate', 
 angular.module('leafly').config(function ($stateProvider, $urlRouterProvider, $httpProvider) {
 
   /* Add New States Above */
-  $urlRouterProvider.otherwise('/strains');
+  $urlRouterProvider.otherwise('/home');
 
 
   $httpProvider.interceptors.push(function($q) {
